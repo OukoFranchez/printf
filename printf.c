@@ -10,8 +10,12 @@ int _printf(const char *format, ...)
 	int i = 0, count = 0;
 	va_list parg;                      /* pointer to variable argument list */
 
+	if (format == NULL)
+		return (-1);
+	if (!format)
+		return (0);
 	va_start(parg, format);
-	while (format != NULL && format[i] != '\0')
+	while (format[i] != '\0')
 	{
 		if (format[i] == '%')
 		{
