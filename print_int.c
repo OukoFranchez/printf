@@ -14,6 +14,11 @@ int print_int(va_list parg)
 	char temp[20] = {0};
 	int count = 0;
 
+	if (num == 0)
+	{
+		putchar('0');
+		return (1);
+	}
 	if (num < 0)
 	{
 		sign = 1;
