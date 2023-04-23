@@ -28,8 +28,8 @@ int switch_case(char c, va_list parg)
 			break;
 		default:
 			putchar('%');
-			putchar(c);
-			count += 2;
+			/* putchar(c); */
+			count += 1;
 			break;
 	}
 	return (count);
