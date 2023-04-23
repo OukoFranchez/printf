@@ -26,10 +26,13 @@ int switch_case(char c, va_list parg)
 		case 'i':
 			count += print_int(parg);
 			break;
+		case 'b':
+			count += print_uint(parg, 2);
+			break;
 		default:
 			putchar('%');
-			/* putchar(c); */
-			count += 1;
+			putchar(c);
+			count += 2;
 			break;
 	}
 	return (count);
