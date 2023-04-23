@@ -10,11 +10,19 @@ int print_string(va_list parg)
 	char *s = va_arg(parg, char *);
 	int count = 0;
 
-	while (s != NULL && *s != '\0')
+	if (s == NULL)
 	{
-		putchar(*s);
-		s++;
-		count++;
+		count += _printf("%s", "(null)");
+	}
+
+	else
+	{
+		while (*s != '\0')
+		{
+			putchar(*s);
+			s++;
+			count++;
+		}
 	}
 
 	return (count);
