@@ -32,7 +32,7 @@ int switch_case(char c, va_list parg)
 			break;
 		default:
 			putchar('%');
-			write(1, &c, 1);
+			putchar(c);
 			count += 2;
 			break;
 	}
