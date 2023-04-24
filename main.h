@@ -13,5 +13,6 @@ int print_rev(char *s);
 int _strlen(char *s);
 int switch_case(char c, va_list parg);
 int print_uint(va_list parg, int base);
+int hexa_decimal(va_list parg, int base);
 
 #endif
