@@ -10,8 +10,9 @@ int print_uint(va_list parg, int base)
 {
 	unsigned int n = va_arg(parg, unsigned int);
 	int count = 0;
-	char binary[33] = {'0'};
+	char uint[33] = {'0'};
 	int i = 0;
+	int mod = 0;
 
 	if (n == 0)
 	{
@@ -20,13 +21,14 @@ int print_uint(va_list parg, int base)
 	}
 	while (n > 0)
 	{
-		binary[i] = '0' + (n % base);
+		mod = n % base;
+		uint[i] = (mod <= 9) ? ('0' + mod) : ('a' + (mod -10));
 		n /= base;
 		i++;
 	}
-	binary[i] = '\0';
+	uint[i] = '\0';
 
-	count += print_rev(binary);
+	count += print_rev(uint);
 
 	return (count);
 }
