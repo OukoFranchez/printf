@@ -1,4 +1,5 @@
 #include "main.h"
+#include <unistd.h>
 
 /**
   * switch_case - switches cases of formats
@@ -31,7 +32,7 @@ int switch_case(char c, va_list parg)
 			break;
 		default:
 			putchar('%');
-			putchar(c);
+			write(1, &c, 1);
 			count += 2;
 			break;
 	}
