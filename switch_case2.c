@@ -15,7 +15,7 @@ int switch_case2(char c, va_list parg)
 	switch (c)
 	{
 		case 'p':
-			count += print_uint(parg, 16);
+			count += print_pointer(parg);
 			break;
 		case 'S':
 			count += print_cstring(parg);
