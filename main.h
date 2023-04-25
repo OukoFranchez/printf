@@ -16,5 +16,7 @@ int print_uint(va_list parg, int base);
 int hexa_decimal(va_list parg, int base);
 int switch_case2(char c, va_list parg);
 int print_cstring(va_list parg);
+int print_rot13(char *str);
+char *_strcpy(char *dest, char *src);
 
 #endif

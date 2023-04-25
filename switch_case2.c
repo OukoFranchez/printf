@@ -20,9 +20,19 @@ int switch_case2(char c, va_list parg)
 		case 'S':
 			count += print_cstring(parg);
 			break;
+		case 'R':
+			str = va_arg(parg, char *);
+			if (str == NULL)
+				count += _printf("%s", "(null)");
+			else
+				count += print_rot13(str);
+			break;
 		case 'r':
 			str = va_arg(parg, char *);
-			count += print_rev(str);
+			if (str == NULL)
+				count += _printf("%s", "(null)");
+			else
+				count += print_rev(str);
 			break;
 		default:
 			putchar('%');
