@@ -43,9 +43,7 @@ int switch_case(char c, va_list parg)
 			count += hexa_decimal(parg, 16);
 			break;
 		default:
-			putchar('%');
-			putchar(c);
-			count += 2;
+			count += switch_case2(c, parg);
 			break;
 	}
 	return (count);

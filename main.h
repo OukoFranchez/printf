@@ -14,5 +14,7 @@ int _strlen(char *s);
 int switch_case(char c, va_list parg);
 int print_uint(va_list parg, int base);
 int hexa_decimal(va_list parg, int base);
+int switch_case2(char c, va_list parg);
+int print_cstring(va_list parg);
 
 #endif
