@@ -14,8 +14,9 @@ int print_rot13(char *s)
 	int count = 0;
 	char *str = malloc(sizeof(char) * (1 + _strlen(s)));
 
-	if (str != NULL)
-		str = _strcpy(str, s);
+	if (str == NULL)
+		return (0);
+	str = _strcpy(str, s);
 	while (str[i])
 	{
 		for (j = 0; s1[j] != '\0'; j++)
