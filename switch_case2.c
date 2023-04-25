@@ -10,6 +10,7 @@
 int switch_case2(char c, va_list parg)
 {
 	int count = 0;
+	char *str = NULL;
 
 	switch (c)
 	{
@@ -18,6 +19,10 @@ int switch_case2(char c, va_list parg)
 			break;
 		case 'S':
 			count += print_cstring(parg);
+			break;
+		case 'r':
+			str = va_arg(parg, char *);
+			count += print_rev(str);
 			break;
 		default:
 			putchar('%');
