@@ -18,10 +18,13 @@ int print_pointer(va_list parg)
 	}
 	else
 	{
-		char *string_address = malloc(sizeof(char) * (18)); /* assuming 64-bit system */
+		/* assuming a 64-bit system */
+		char *string_address = malloc(sizeof(char) * (18));
 
 		if (string_address == NULL)
 			return (0);
+
+		/* converting the address to string format */
 		sprintf(string_address, "0x%lx", (unsigned long)ptr);
 		count += printf("%s", string_address);
 		free(string_address);
