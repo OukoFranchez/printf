@@ -22,7 +22,7 @@ int print_uint(va_list parg, int base)
 	while (n > 0)
 	{
 		mod = n % base;
-		uint[i] = (mod <= 9) ? ('0' + mod) : ('a' + (mod -10));
+		uint[i] = (mod <= 9) ? ('0' + mod) : ('a' + (mod - 10));
 		n /= base;
 		i++;
 	}
