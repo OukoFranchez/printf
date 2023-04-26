@@ -7,11 +7,11 @@
 int print_pointer(va_list parg)
 {
 	int count = 0;
-
 	void *ptr = va_arg(parg, void *);
 
-	printf("%p", ptr);
-	count += sizeof(void *);
+	if (ptr == NULL)
+		return (0);
+	count += printf("%p", ptr);
 
 	return (count);
 }
